@@ -89,7 +89,7 @@ body {
 
 .landing .intro-text h1 {
     margin: 0;
-    font-size: 50px;
+    font-size: 55px;
     font-weight: 800;
     color: var(--main-color);
 }
@@ -102,54 +102,79 @@ body {
 
 /* end landing */
 
-
-/* start features  */
-
-.features {
-    padding-top: 30px;
+.modules {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: #f6f6f6;
 }
 
-.features .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 25px;
+.modules .modules-content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.features .container::before {
-    display: none;
+@media (max-width:768px) {
+    .modules .modules-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
-.features .card {
-    padding: 20px;
-    padding-top: 20px;
-    border: 3px solid var(--main-color);
+@media (max-width:991px) {
+    .modules .modules-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.modules .modules-content .card {
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px #333;
+    box-shadow: 3px 3px 7px #333;
+    width: 30%;
+    margin-bottom: 20px;
 }
 
-.features .card h2 {
-    margin: 20px 0;
+@media (max-width:768px) {
+    .modules .modules-content .card {
+        width: 100%;
+    }
+}
+
+@media (min-width:769px) and (max-width:991px) {
+    .modules .modules-content .card {
+        width: 48%;
+    }
+}
+
+.modules .modules-content .card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 250px;
+}
+
+.modules .modules-content .card .info {
+    padding: 20px;
+}
+
+.modules .modules-content .card h3 {
+    margin: 5px;
     font-weight: 800;
     color: var(--main-color);
-    text-align: center;
 }
 
-.features .card p {
-    line-height: 1.8;
+.modules .modules-content .card p {
     color: #777;
-    font-size: 22px;
-}
-
-.features .card li q {
     line-height: 1.8;
-    color: #3388d2;
-    font-size: 20px;
 }
 
 
-/* end features  */
+/* end modules  */
 
 
 /* start footer */
